@@ -1,0 +1,36 @@
+.cta-2 {
+  width: fit-content;
+  margin: 6% auto;
+  text-align: center;
+}
+
+.cta-2 h3,
+.cta-2 p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.cta-2 h3 {
+  font-size: 28px;
+}
+
+.cta-2 a {
+  /* font-size: 13px; */
+  padding: 10px;
+  background-color: #df222c;
+  width: fit-content;
+  display: block;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+/* breakpoints ====================================== */
+@media (min-width: 1024px) {
+  .cta-2 {
+    max-width: 1200px;
+  }
+}

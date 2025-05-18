@@ -1,0 +1,46 @@
+.container-video {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5% auto;
+}
+
+.container-video .header-video {
+  width: 100%;
+  height: 300px;
+  min-height: 495px;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  background: grey;
+  margin-top: 4%;
+}
+
+.container-video iframe {
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+}
+
+.container-video h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+}
+
+/* Breakpoitns ================================= */
+@media (min-width: 360px) and (max-width: 1024px) {
+  .container-video {
+    padding: 0 10px;
+  }
+
+  .container-video .header-video {
+    min-height: auto;
+  }
+}

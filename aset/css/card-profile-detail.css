@@ -1,0 +1,83 @@
+.card-profile {
+  max-width: 500px;
+  background-color: #1f1f1f;
+  border: 1px solid #ff4d4d;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 4% 0;
+}
+
+.card-profile h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.card-profile .profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card-profile .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-profile .likes {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.card-profile .likes::before {
+  content: "♡";
+  margin-right: 8px;
+}
+
+.card-profile .info {
+  font-size: 1em;
+}
+
+.card-profile .info strong {
+  display: block;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.card-profile .location {
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+.card-profile .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  gap: 10px;
+  font-size: 0.9em;
+}
+
+.card-profile .contact-grid div span {
+  display: block;
+  color: #999;
+  margin-bottom: 3px;
+}
+
+.card-profile .contact-grid div a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .card-profile .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

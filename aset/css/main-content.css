@@ -1,0 +1,70 @@
+.main-content {
+  flex: 1 1 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #fff;
+}
+
+.main-content h1 {
+  font-size: 1.6rem;
+  margin: 20px 0;
+}
+
+.main-content .date {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.main-content .content p {
+  line-height: 38px;
+  margin-bottom: 20px;
+}
+
+.main-content .content p:nth-child(5),
+.main-content .content p:nth-child(6) {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+.main-content .content p:nth-child(6) a {
+  color: #0090ff;
+  text-decoration: none;
+}
+
+.main-content .header-image {
+  width: 100%;
+  min-height: 495px;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  background: grey;
+}
+
+.main-content iframe {
+  transition: all 0.2s ease-out 0s;
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: 100%;
+}
+
+/* Breakpoint ================================== */
+@media (min-width: 360px) and (max-width: 430px) {
+  .main-content .header-image {
+    min-height: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1063px) {
+  .main-content {
+    flex: 1 1 640px;
+  }
+}

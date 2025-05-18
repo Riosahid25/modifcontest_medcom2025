@@ -1,0 +1,81 @@
+.container-gallery {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-gallery .main {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.container-gallery .main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.container-gallery input[type="radio"] {
+  display: none;
+}
+
+/* show the checked image */
+#img1:checked ~ .main #pic1,
+#img2:checked ~ .main #pic2,
+#img3:checked ~ .main #pic3,
+#img4:checked ~ .main #pic4,
+#img5:checked ~ .main #pic5 {
+  opacity: 1;
+  z-index: 1;
+}
+
+.container-gallery .thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.container-gallery .thumbnails label {
+  cursor: pointer;
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.container-gallery .thumbnails label:hover {
+  opacity: 1;
+}
+
+/* highlight active thumb */
+#img1:checked ~ .thumbnails label[for="img1"],
+#img2:checked ~ .thumbnails label[for="img2"],
+#img3:checked ~ .thumbnails label[for="img3"],
+#img4:checked ~ .thumbnails label[for="img4"],
+#img5:checked ~ .thumbnails label[for="img5"] {
+  opacity: 1;
+  outline: 2px solid #df222c;
+}
+
+.container-gallery .thumbnails img {
+  width: 100%;
+  display: block;
+}
+
+/* Breakpoints ===================================== */
+@media (min-width: 360px) and (max-width: 820px) {
+  .container-gallery {
+    padding: 0 10px;
+  }
+}

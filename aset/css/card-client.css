@@ -1,0 +1,3 @@
+.card-wrap .container-category::before {
+  display: none;
+}

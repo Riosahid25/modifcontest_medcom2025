@@ -1,0 +1,129 @@
+.card-wrap .container-category {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-wrap .tabs {
+  display: flex;
+  overflow-x: auto;
+  background: #1e1e1e;
+  border-bottom: 2px solid #333;
+  justify-content: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.card-wrap .tabs input[type="radio"] {
+  display: none;
+}
+
+.card-wrap input[type="radio" i] {
+  display: none;
+}
+
+.card-wrap .tabs label {
+  padding: 1em;
+  cursor: pointer;
+  color: #aaa;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+  min-width: 80px;
+  display: inline-block;
+}
+
+#tab-all:checked ~ .tabs label[for="tab-all"],
+#tab-ford:checked ~ .tabs label[for="tab-ford"],
+#tab-audi:checked ~ .tabs label[for="tab-audi"],
+#tab-porche:checked ~ .tabs label[for="tab-porche"],
+#tab-hyundai:checked ~ .tabs label[for="tab-hyundai"],
+#tab-honda:checked ~ .tabs label[for="tab-honda"] {
+  color: white;
+  border-bottom: 3px solid red;
+}
+
+.card-wrap .tab-content {
+  display: none;
+  padding: 2em 1em;
+}
+
+#tab-all:checked ~ .contents .content-all,
+#tab-ford:checked ~ .contents .content-ford,
+#tab-audi:checked ~ .contents .content-audi,
+#tab-porche:checked ~ .contents .content-porche,
+#tab-hyundai:checked ~ .contents .content-hyundai,
+#tab-honda:checked ~ .contents .content-honda {
+  display: block;
+}
+
+.card-wrap .page {
+  display: none;
+}
+
+#all-page1:checked ~ .contents .content-all .page1,
+#all-page2:checked ~ .contents .content-all .page2,
+#ford-page1:checked ~ .contents .content-ford .page1,
+#ford-page2:checked ~ .contents .content-ford .page2,
+#ford-page3:checked ~ .contents .content-ford .page3,
+#audi-page1:checked ~ .contents .content-audi .page1,
+#audi-page2:checked ~ .contents .content-audi .page2,
+#porche-page1:checked ~ .contents .content-porche .page1,
+#porche-page2:checked ~ .contents .content-porche .page2,
+#hyundai-page1:checked ~ .contents .content-hyundai .page1,
+#hyundai-page2:checked ~ .contents .content-hyundai .page2,
+#honda-page1:checked ~ .contents .content-honda .page1,
+#honda-page2:checked ~ .contents .content-honda .page2 {
+  display: block;
+}
+
+.card-wrap .pagination {
+  display: none;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 1.5em;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
+}
+
+.card-wrap .pagination label {
+  padding: 0.5em 1.2em;
+  background: #2a2a2a;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9em;
+  transition: 0.2s;
+  color: #f4f4f4;
+}
+
+.card-wrap .pagination label:hover {
+  background: #444;
+}
+
+.card-wrap .nav-all,
+.card-wrap .nav-ford,
+.card-wrap .nav-audi,
+.card-wrap .nav-porche,
+.card-wrap .nav-hyundai,
+.card-wrap .nav-honda {
+  display: none;
+}
+
+#tab-all:checked ~ .contents .nav-all,
+#tab-ford:checked ~ .contents .nav-ford,
+#tab-audi:checked ~ .contents .nav-audi,
+#tab-porche:checked ~ .contents .nav-porche,
+#tab-hyundai:checked ~ .contents .nav-hyundai,
+#tab-honda:checked ~ .contents .nav-honda {
+  display: flex;
+}
+
+/* breakpoints============== */
+@media (min-width: 360px) and (max-width: 425px) {
+  /* .card-wrap .tabs {
+    padding-left: 10%;
+  } */
+
+  .card-wrap .tabs label {
+    padding: 10px 8px;
+    min-width: auto;
+  }
+}

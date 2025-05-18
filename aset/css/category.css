@@ -1,0 +1,42 @@
+.category {
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+  font-family: "Poppins", serif;
+  color: #fff;
+}
+
+.category .category-title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.category h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 5px;
+  margin: 10px 0;
+  background-color: #222;
+  width: fit-content;
+  /* z-index: 2; */
+}
+
+.category h2::before {
+  content: "";
+  width: 50%;
+  height: 3px;
+  position: absolute;
+  background-color: #fff;
+  top: 45%;
+  left: 0;
+  transform: translateX(50%);
+  z-index: -1;
+}
+
+.category .category-subtitle p {
+  font-size: 14px;
+  text-align: center;
+}

@@ -1,0 +1,219 @@
+@import url("https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css");
+
+.hamburger-menu {
+  font-family: "Poppins", serif;
+  position: relative;
+  top: 10px;
+}
+
+.container-header .hamburger-logo {
+  position: relative;
+  top: 10px;
+}
+
+.container-header .hamburger-logo img {
+  width: 133px;
+  height: auto;
+}
+
+.hamburger-menu input[type="checkbox"] {
+  display: none;
+}
+/*Scroll bar main-menu*/
+.hamburger-menu .nav-menu ::-webkit-scrollbar {
+  width: 4px;
+}
+.hamburger-menu .nav-menu ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+.hamburger-menu .nav-menu ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/*Placeholder*/
+.hamburger-menu ::-webkit-input-placeholder {
+  color: #ccc;
+}
+.hamburger-menu ::-moz-placeholder {
+  color: #ccc;
+}
+.hamburger-menu :-ms-input-placeholder {
+  color: #ccc;
+}
+.hamburger-menu :-moz-placeholder {
+  color: #ccc;
+}
+
+.hamburger-menu nav {
+  height: 72px;
+  padding: 0 24px;
+  justify-content: space-between;
+  display: flex;
+  z-index: 999;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1), 0 0 36px 0 rgba(0, 0, 0, 0.1);
+}
+.hamburger-menu nav > div,
+.hamburger-menu nav > div > div {
+  display: flex;
+}
+/* System Menu*/
+.hamburger-menu .check-control {
+  display: none;
+}
+.hamburger-menu .menu-bt {
+  z-index: 9999;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+}
+.hamburger-menu .menu-bt:before {
+  display: block;
+  line-height: initial;
+  width: 24px;
+  height: 24px;
+  font-family: "Material Design Icons";
+  font-size: 24px;
+  font-weight: normal;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #fff;
+}
+.hamburger-menu .menu-bt.right:before {
+  content: "\f35c";
+}
+
+.hamburger-menu #menu-right:checked + .menu-bt:before {
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.hamburger-menu [id*="menu-"]:checked + .menu-bt:before {
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.hamburger-menu [id*="menu-"]:checked + .menu-bt:before {
+  content: "\f5ad";
+}
+.hamburger-menu .nav-menu {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 80%;
+  max-width: 320px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0), 0 0 32px rgba(0, 0, 0, 0);
+}
+.hamburger-menu .nav-menu.right {
+  -webkit-transform: translate(100%);
+  -ms-transform: translate(100%);
+  -o-transform: translate(100%);
+  transform: translate(100%);
+}
+.hamburger-menu .nav-menu.left {
+  -webkit-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  -o-transform: translate(-100%);
+  transform: translate(-100%);
+}
+.hamburger-menu [id*="menu-"]:checked ~ .nav-menu {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1), 0 0 32px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+  transform: translate(0);
+}
+.hamburger-menu .nav-menu.left {
+  left: 0;
+}
+.hamburger-menu .nav-menu.right {
+  right: 0;
+}
+.hamburger-menu .nav-menu h5 {
+  /* color: rgba(255, 255, 255, 0.5); */
+  color: #df222c;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 32px 24px 14px 24px;
+}
+.hamburger-menu .nav-menu h5:after {
+  content: "";
+  display: block;
+  width: 5em;
+  margin-top: 5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.hamburger-menu .nav-menu a {
+  display: block;
+  color: #fff;
+  padding: 14px 8px 14px 58px;
+  text-decoration: none;
+  position: relative;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+.hamburger-menu .nav-menu a:before {
+  margin-right: 14px;
+  font-size: 24px;
+  left: 20px;
+  top: 9px;
+  position: absolute;
+}
+.hamburger-menu .nav-menu a span {
+  float: right;
+  margin-top: -3px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.85em;
+  padding: 4px 8px;
+}
+.hamburger-menu .nav-menu .menu-scroll {
+  height: calc(100vh - 72px);
+  overflow-y: auto;
+  margin-top: 72px;
+  padding: 0 8px 24px 8px;
+  width: 100%;
+  margin-right: 8px;
+}
+
+.hamburger-menu .nav-menu.right a.active {
+  background-color: #df222c;
+}
+.hamburger-menu .nav-menu.right a:hover {
+  background-color: #df222c;
+}
+
+/*Right menu background*/
+.hamburger-menu .nav-menu.right {
+  background: #222;
+}
+/*Main menu background*/
+.hamburger-menu .nav-menu.left {
+  background: #222;
+}
+
+/* breakpoint ===============================*/
+@media (min-width: 1024px) {
+  .container-header .hamburger-logo,
+  .hamburger-menu .menu-bt {
+    display: none;
+  }
+}

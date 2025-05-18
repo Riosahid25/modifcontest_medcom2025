@@ -1,0 +1,25 @@
+.container-tags {
+  position: relative;
+  width: 100%;
+}
+
+.container-tags li {
+  display: inline-block;
+  background-color: #df222c;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.container-tags a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* breakpoints================================ */
+@media (min-width: 360px) and (max-width: 480px) {
+  .container-tags ul li {
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+}
