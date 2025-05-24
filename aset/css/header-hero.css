@@ -9,20 +9,19 @@
   overflow: hidden;
 }
 
-.container-hero .hero-img img {
+/* .container-hero .hero-img img {
   top: 0;
   left: 0;
   width: calc(100% + 40px);
   height: 15rem;
   object-fit: cover;
-  /* margin: -18px; */
-}
+} */
 
 .container-hero .hero-text {
   width: 70%;
   padding: 0 20px 0;
   position: absolute;
-  bottom: 20%;
+  bottom: 25%;
   margin: 0;
   background: rgba(2, 2, 2, 0.4);
 }
@@ -47,13 +46,136 @@
   color: #fff;
 }
 
+.container-hero .slider {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+.container-hero .slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  gap: 0;
+}
+.container-hero .slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+.container-hero .slide .hero-img {
+  width: 99vw;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.container-hero input {
+  display: none;
+}
+
+#slide1:checked ~ .slider .slides {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .slider .slides {
+  transform: translateX(-100%);
+}
+#slide3:checked ~ .slider .slides {
+  transform: translateX(-200%);
+}
+
+/* Pagination bullets */
+.container-hero .pagination {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+.container-hero .pagination label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff3;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#slide1:checked ~ .slider .pagination label[for="slide1"],
+#slide2:checked ~ .slider .pagination label[for="slide2"],
+#slide3:checked ~ .slider .pagination label[for="slide3"] {
+  background: #fff;
+}
+
+.container-hero .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  user-select: none;
+  z-index: 20;
+}
+.container-hero .arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.container-hero .arrow-left {
+  left: 15px;
+}
+.container-hero .arrow-right {
+  right: 15px;
+}
+/* Ikon panah dengan CSS */
+.container-hero .arrow::before {
+  content: "";
+  display: inline-block;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+}
+.container-hero .arrow-left::before {
+  transform: rotate(135deg);
+}
+.container-hero .arrow-right::before {
+  transform: rotate(-45deg);
+}
+
+/* Tombol panah aktif berdasarkan slide yang dipilih */
+/* Slide 1 */
+#slide1:checked ~ .slider label[for="slide3"].arrow-left,
+#slide1:checked ~ .slider label[for="slide2"].arrow-right {
+  display: flex;
+}
+/* Slide 2 */
+#slide2:checked ~ .slider label[for="slide1"].arrow-left,
+#slide2:checked ~ .slider label[for="slide3"].arrow-right {
+  display: flex;
+}
+/* Slide 3 */
+#slide3:checked ~ .slider label[for="slide2"].arrow-left,
+#slide3:checked ~ .slider label[for="slide1"].arrow-right {
+  display: flex;
+}
+
+.container-hero .arrow {
+  display: none;
+}
+
 /* breakpoints ============================ */
 
-@media (min-width: 1024px) and (max-width: 1200px) {
+/* @media (min-width: 1024px) and (max-width: 1200px) {
   .container-navbar .navbar-ads {
     flex: 0 0 40%;
   }
-}
+} */
 
 @media (min-width: 1024px) {
   .container-hero .hero-img img {
@@ -61,7 +183,8 @@
   }
 
   .container-hero .hero-text {
-    width: 40%;
+    width: 45%;
+    margin-left: 5%;
   }
 
   .container-hero .hero-text h1 {
@@ -78,5 +201,54 @@
     font-size: 16px;
     font-weight: bold;
     margin-top: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-hero .hero-text {
+    width: 70%;
+    margin-left: 5%;
+  }
+
+  .container-hero .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .container-hero p:nth-child(2) {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .container-hero .hero-text a {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-hero .slider {
+    height: 60vh;
+  }
+}
+@media (max-width: 480px) {
+  .container-hero .slider {
+    height: 50vh;
+  }
+
+  .container-hero .hero-text {
+    width: 76%;
+    margin-left: 12%;
+    bottom: 12%;
+  }
+
+  .container-hero .pagination {
+    bottom: 6px;
+  }
+
+  .container-hero .pagination label {
+    width: 7px;
+    height: 7px;
   }
 }

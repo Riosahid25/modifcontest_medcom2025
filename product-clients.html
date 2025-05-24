@@ -88,17 +88,70 @@
     </section>
     <!-- END OF HEADER -->
 
-    <!-- START OF HERO -->
+  <!-- START OF HERO -->
     <div class="container-hero" id="container-hero">
-      <div class="hero-item">
-        <div class="hero-img">
-          <img src="./aset/img/hero-clients.svg" alt="" class="" width="70" height="70" />
+      <!-- Radio untuk slide -->
+      <input type="radio" name="slider" id="slide1" checked />
+      <input type="radio" name="slider" id="slide2" />
+      <input type="radio" name="slider" id="slide3" />
+
+      <!-- <div class="hero-item">
+          <div class="hero-img">
+            <img src="./aset/img/img-hero.svg" alt="" class="" width="70" height="70" />
+          </div>
+          <div class="hero-text">
+            <h1>Honda Civic Type R</h1>
+            <p>Saksikan Keajaiban Modifikasi Mobil Kontes GIIAS 2025</p>
+            <a href="#">Daftar Sekarang <img src="./aset/img/Arrow-right-long.svg" alt="" /></a>
+          </div>
+        </div> -->
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="./aset/img/img-hero.svg" alt="Slide 1" class="hero-img" width="1441" height="425" />
+            <div class="hero-text">
+              <h1>Honda Civic Type R</h1>
+              <p>Saksikan Keajaiban Modifikasi Mobil Kontes GIIAS 2025</p>
+              <a href="#">Daftar Sekarang <img src="./aset/img/Arrow-right-long.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="./aset/img/mercedes-hero.svg" alt="Slide 2" class="hero-img" width="1441" height="425" />
+            <div class="hero-text">
+              <h1>Mercedes Benz CLA-Class</h1>
+              <p>Saksikan Keajaiban Modifikasi Mobil Kontes GIIAS 2025</p>
+              <a href="#">Daftar Sekarang <img src="./aset/img/Arrow-right-long.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="./aset/img/bmw-coupe.svg" alt="Slide 3" class="hero-img" width="1441" height="425" />
+            <div class="hero-text">
+              <h1>BMW 2 Series Coupe</h1>
+              <p>Saksikan Keajaiban Modifikasi Mobil Kontes GIIAS 2025</p>
+              <a href="#">Daftar Sekarang <img src="./aset/img/Arrow-right-long.svg" alt="" /></a>
+            </div>
+          </div>
         </div>
-        <div class="hero-text">
-          <h1>Honda Civic Maestro</h1>
-          <p>Sporty, Elegan, Tak Tertandingi</p>
-          <a href="#">Daftar Sekarang <img src="./aset/img/Arrow-right-long.svg" alt="" /></a>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
         </div>
+
+        <!-- Tombol panah kiri/kanan -->
+        <!-- Slide 1 controls -->
+        <label for="slide3" class="arrow arrow-left"></label>
+        <label for="slide2" class="arrow arrow-right"></label>
+
+        <!-- Slide 2 controls -->
+        <label for="slide1" class="arrow arrow-left"></label>
+        <label for="slide3" class="arrow arrow-right"></label>
+
+        <!-- Slide 3 controls -->
+        <label for="slide2" class="arrow arrow-left"></label>
+        <label for="slide1" class="arrow arrow-right"></label>
       </div>
     </div>
     <!-- END OF HERO -->
