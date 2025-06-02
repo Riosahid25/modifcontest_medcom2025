@@ -27,9 +27,13 @@
 }
 
 /* breakpoints mobile ============================ */
-@media (min-width: 360px) and (max-width: 1279px) {
-  .showcase-1,
+@media (min-width: 1280px) {
+  /* .showcase-1,
   .showcase-2 {
+    display: none;
+  } */
+
+  .showcase-1.mobile {
     display: none;
   }
 }
