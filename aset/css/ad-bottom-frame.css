@@ -1,0 +1,30 @@
+.ad-bottom-frame {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 970px;
+  height: 90px;
+  background-color: #454141;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 9999;
+}
+
+.ad-bottom-frame .bottom-frame-isi {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+.ad-bottom-frame .bottom-frame-isi::before {
+  content: "Advertisement";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #f4f4f4;
+}

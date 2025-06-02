@@ -1,0 +1,32 @@
+.ads-billboard {
+  position: relative;
+  width: 100%;
+  max-width: 970px;
+  min-height: 90px;
+  margin: 2% auto;
+  background-color: #454141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #f4f4f4;
+}
+
+.ads-billboard::before {
+  content: "Advertisement";
+  position: absolute;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: bold;
+  color: #888;
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* breakpoints mobile ============================ */
+@media (min-width: 360px) and (max-width: 1279px) {
+  .ads-billboard {
+    display: none;
+  }
+}
