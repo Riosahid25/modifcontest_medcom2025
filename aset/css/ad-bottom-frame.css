@@ -1,22 +1,23 @@
 .ad-bottom-frame {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 970px;
-  height: 90px;
-  background-color: #454141;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  height: auto;
   z-index: 9999;
+  left: 0;
+  display: block;
 }
 
 .ad-bottom-frame .bottom-frame-isi {
-  display: inline-block;
-  text-decoration: none;
-  position: relative;
   margin: 0 auto;
+  background: #454141;
+  max-width: 970px;
+  min-height: 90px;
+  z-index: 9999;
+  display: block;
+  position: relative;
 }
 
 .ad-bottom-frame .bottom-frame-isi::before {
@@ -25,6 +26,14 @@
   top: 0;
   left: 0;
   right: 0;
+  line-height: 90px;
   font-size: 16px;
   color: #f4f4f4;
+}
+
+/* breakpoints mobile ============================ */
+@media (min-width: 360px) and (max-width: 1279px) {
+  .ad-bottom-frame {
+    display: none;
+  }
 }
