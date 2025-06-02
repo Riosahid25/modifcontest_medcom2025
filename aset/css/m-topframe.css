@@ -1,0 +1,43 @@
+/* breakpoints mobile ============================ */
+@media (min-width: 360px) and (max-width: 1279px) {
+  .ad-top-frame {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    text-align: center;
+    height: auto;
+    z-index: 9999;
+    left: 0;
+    display: block;
+  }
+
+  .ad-top-frame .top-frame-isi {
+    margin: 0 auto;
+    background: #454141;
+    max-width: 320px;
+    min-height: 50px;
+    z-index: 9999;
+    display: block;
+    position: relative;
+  }
+
+  .ad-top-frame .top-frame-isi::before {
+    content: "Advertisement";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 50px;
+    font-size: 16px;
+    color: #f4f4f4;
+  }
+
+  .container-header {
+    top: 6%;
+  }
+
+  .container-hero {
+    margin-top: 15%;
+  }
+}
