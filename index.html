@@ -44,8 +44,24 @@
     <link rel="stylesheet" href="./aset/css/ad-bottom-frame.css" />
     <link rel="stylesheet" href="./aset/css/m-topframe.css" />
     <link rel="stylesheet" href="./aset/css/m-btmframe.css" />
+    <link rel="stylesheet" href="./aset/css/ad-popup.css" />
   </head>
   <body>
+    <!-- START OF POP-UP ADS -->
+    <!-- Checkbox kontrol -->
+    <input type="checkbox" id="hide-popup" hidden />
+
+    <!-- Popup Overlay -->
+    <label for="hide-popup" class="overlay">
+      <div class="popup">
+        <label for="hide-popup" class="close-btn">&times;</label>
+        <h3>Iklan Spesial!</h3>
+        <p>Dapatkan diskon hingga 50%!</p>
+        <img src="https://via.placeholder.com/250x150?text=Iklan" alt="Iklan" style="width: 100%; height: auto; margin-top: 10px" />
+      </div>
+    </label>
+    <!-- END OF POP-UP ADS -->
+
     <!-- START OF ADS TOP FRAME MOBILE  -->
     <div class="ad-top-frame">
       <a href="" class="top-frame-isi">
@@ -53,6 +69,7 @@
       </a>
     </div>
     <!-- END OF ADS TOP FRAME MOBILE -->
+
     <!-- START OF HEADER -->
     <section class="container-header" id="container-header">
       <!-- START OF LOGO -->
